@@ -71,15 +71,6 @@
    ```
 5. **创建 Pull Request**。
 
-#### Gitee 特性
-
-1. 你可以使用 Readme_XXX.md 来支持不同语言，例如 Readme_en.md, Readme_zh.md。
-2. Gitee 博客 [blog.gitee.com](https://blog.gitee.com)
-3. 探索开源项目 [https://gitee.com/explore](https://gitee.com/explore)
-4. 最有价值的开源项目 [GVP](https://gitee.com/gvp)
-5. Gitee 手册 [https://gitee.com/help](https://gitee.com/help)
-6. 最受欢迎的成员 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
-
 #### 许可证
 
 本项目遵循 MIT 许可证，详细信息请查看 LICENSE 文件。
