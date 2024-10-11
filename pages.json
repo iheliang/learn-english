@@ -1,0 +1,108 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+				// "navigationStyle": "custom"
+			}
+		},
+		// {
+		// 	"path" : "pages/debut/debutEnter/debutEnter",
+		// 	"style" : 
+		// 	{
+		// 		"navigationBarTitleText" : "首次进入",
+		// 		"navigationStyle": "custom"
+		// 	}
+		// },
+		{
+			"path": "pages/debut/debutEnter",
+			"style": {
+				"navigationBarTitleText": "首次进入"
+			}
+		},
+		{
+			"path": "pages/debut/customized",
+			"style": {
+				"navigationBarTitleText": "制定学习计划"
+			}
+		},
+		{
+			"path": "pages/essay/essayHome",
+			"style": {
+				"navigationBarTitleText": "小短文首页"
+			}
+		},
+		{
+			"path" : "pages/essay/essayMode/listenMode/listenMode",
+			"style" : 
+			{
+				"navigationBarTitleText" : "听力模式"
+			}
+		},
+		{
+			"path" : "pages/essay/essayMode/listenMode/readMode",
+			"style" : 
+			{
+				"navigationBarTitleText" : "朗读模式"
+			}
+		},
+		{
+			"path" : "pages/download/downloadHome",
+			"style" : 
+			{
+				"navigationBarTitleText" : "打印下载"
+			}
+		},
+		{
+			"path" : "pages/user/userCenter",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#626ae7",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"height": "50px",
+		"fontSize": "20px",
+		"iconWidth": "24px",
+		"spacing": "3px",
+		"list": [
+		  {
+			"pagePath": "pages/index/index",
+			"iconPath": "static/人物.png",
+			"selectedIconPath": "static/人物 (1).png",
+			"text": "场景句型"
+		},{
+			"pagePath": "pages/essay/essayHome",
+			"iconPath": "static/朗读短文.png",
+			"selectedIconPath": "static/朗读短文 (1).png",
+			"text": "小短文"
+		},{
+			"pagePath": "pages/download/downloadHome",
+			"iconPath": "static/打印.png",
+			"selectedIconPath": "static/打印 (1).png",
+			"text": "打印下载"
+		},{
+			"pagePath": "pages/user/userCenter",
+			"iconPath": "static/我的.png",
+			"selectedIconPath": "static/我的 (1).png",
+			"text": "我的"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"easycom": {
+		"autoscan": true,
+		"^vue-file-(.*)":"@/uni_modules/l-starRate/components/l-starRate.vue"
+	}
+}
