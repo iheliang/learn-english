@@ -43,49 +43,116 @@
 				<view>关闭译文</view>
 			</view>
 		</view>
+		<view>
+			<button @tap="startRecord">开始录音</button>
+			<button @tap="endRecord">停止录音</button>
+			<button @tap="playVoice">播放录音</button>
+			<button @click="trans()">翻译</button>
+		</view>
 	</view>
 </template>
 
 <script setup>
-	const modelSwitch =()=>{
+	import {
+		ref
+	} from 'vue';
+
+	// 创建音频上下文
+	const innerAudioContext = uni.createInnerAudioContext();
+
+	// 加载插件
+	const plugin = requirePlugin("WechatSI");
+	const manager = plugin.getRecordRecognitionManager();
+
+	// 数据状态
+	const voicePath = ref('');
+	const text = ref('uni-app');
+
+	// 设置录音识别管理器的事件监听器
+	manager.onStop = (res) => {
+		console.log("record file path", res.tempFilePath);
+		console.log("识别结果", res.result);
+		voicePath.value = res.tempFilePath;
+	};
+
+	manager.onStart = (res) => {
+		console.log("成功开始录音识别", res);
+	};
+
+	manager.onError = (res) => {
+		console.error("error msg", res.msg);
+	};
+
+	// 有新的识别内容返回，则会调用此事件
+	manager.onRecognize = (res) => {
+		console.log('改变', res);
+	};
+
+	// 开始录音的方法
+	const startRecord = () => {
+		manager.start({
+			lang: "en_US",
+		});
+	};
+
+	// 结束录音的方法
+	const endRecord = () => {
+		console.log('录音结束');
+		manager.stop();
+	};
+
+	// 播放录音的方法
+	const playVoice = () => {
+		console.log('播放录音');
+		if (voicePath.value) {
+			innerAudioContext.src = voicePath.value;
+			innerAudioContext.play();
+		}
+	};
+
+	const modelSwitch = () => {
 		uni.navigateTo({
-			url:"/pages/essay/essayMode/listenMode/listenMode"
+			url: "/pages/essay/essayMode/listenMode/listenMode"
 		})
 	}
 </script>
 
 <style lang="scss" scoped>
-	.content{
+	.content {
 		display: flex;
 		flex-direction: column;
 		background: #f3f4f6;
 		padding: 30rpx 0;
-		.header{
+
+		.header {
 			width: 630rpx;
 			height: 400rpx;
 			background: #FFF;
 			margin: 20rpx auto;
-			.headerTop{
+
+			.headerTop {
 				display: flex;
 				align-items: center;
 				border-bottom: 2rpx solid #666;
 				padding: 20rpx;
-				image{
+
+				image {
 					width: 50rpx;
 					height: 50rpx;
 				}
-				.headerTitle{
-					
-				}
+
+				.headerTitle {}
 			}
-			.headerBottom{
+
+			.headerBottom {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				font-size: 70rpx;
 			}
 		}
-		.body{
+
+		.body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -93,15 +160,16 @@
 			height: 300rpx;
 			background: #FFF;
 			margin: 20rpx auto;
-			.bodyTop{
+
+			.bodyTop {
 				font-size: 40rpx;
 				color: red;
 			}
-			.bodyBottom{
-				
-			}
+
+			.bodyBottom {}
 		}
-		.footer{
+
+		.footer {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -109,24 +177,27 @@
 			height: 420rpx;
 			background: #FFF;
 			margin: 20rpx auto;
-			image{
+
+			image {
 				width: 100rpx;
 				height: 100rpx;
 				margin: 20rpx 0;
 			}
-			.footerTop{
+
+			.footerTop {
 				margin: 20rpx 0;
 				font-size: 40rpx;
 			}
-			.footerBottom{
-				
-			}
-			button{
+
+			.footerBottom {}
+
+			button {
 				margin-top: 30rpx;
 				background: #626ae7;
 				color: #FFF;
 			}
 		}
+
 		.bottomNavBar {
 			position: fixed;
 			bottom: 0;
@@ -140,6 +211,7 @@
 			align-items: center;
 			padding: 10rpx 0;
 			padding-bottom: env(safe-area-inset-bottom);
+
 			.navItem {
 				display: flex;
 				flex-direction: column;
