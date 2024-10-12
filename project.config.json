@@ -1,28 +1,38 @@
 {
-  "appid": "touristappid",
-  "compileType": "miniprogram",
-  "libVersion": "3.5.1",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
-  "setting": {
-    "coverView": true,
-    "es6": true,
-    "postcss": true,
-    "minified": true,
-    "enhance": true,
-    "showShadowRootInWxmlPanel": true,
-    "packNpmRelationList": [],
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    }
-  },
-  "condition": {},
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  }
+	"appid": "wx1d1081d4ef17eb28",
+	"projectname": "英语口语5566",
+	"compileType": "miniprogram",
+	"libVersion": "3.5.1",
+	"packOptions": {
+		"ignore": [],
+		"include": []
+	},
+	"setting": {
+		"coverView": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"enhance": true,
+		"showShadowRootInWxmlPanel": true,
+		"packNpmRelationList": [],
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"urlCheck": false,
+		"postcss": false,
+		"minimizeMjs": false,
+		"plugins": {
+			"WechatSI": {
+				"version": "0.3.3",
+				"provider": "wx069ba97219f66d99"
+			}
+		},
+		"condition": {},
+		"editorSetting": {
+			"tabIndent": "insertSpaces",
+			"tabSize": 2
+		}
+	}
 }
