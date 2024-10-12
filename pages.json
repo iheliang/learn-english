@@ -34,31 +34,27 @@
 			}
 		},
 		{
-			"path" : "pages/essay/essayMode/listenMode/listenMode",
-			"style" : 
-			{
-				"navigationBarTitleText" : "听力模式"
+			"path": "pages/essay/essayMode/listenMode/listenMode",
+			"style": {
+				"navigationBarTitleText": "听力模式"
 			}
 		},
 		{
-			"path" : "pages/essay/essayMode/listenMode/readMode",
-			"style" : 
-			{
-				"navigationBarTitleText" : "朗读模式"
+			"path": "pages/essay/essayMode/listenMode/readMode",
+			"style": {
+				"navigationBarTitleText": "朗读模式"
 			}
 		},
 		{
-			"path" : "pages/download/downloadHome",
-			"style" : 
-			{
-				"navigationBarTitleText" : "打印下载"
+			"path": "pages/download/downloadHome",
+			"style": {
+				"navigationBarTitleText": "打印下载"
 			}
 		},
 		{
-			"path" : "pages/user/userCenter",
-			"style" : 
-			{
-				"navigationBarTitleText" : "我的"
+			"path": "pages/user/userCenter",
+			"style": {
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
@@ -71,23 +67,22 @@
 		"fontSize": "20px",
 		"iconWidth": "24px",
 		"spacing": "3px",
-		"list": [
-		  {
+		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath": "static/人物.png",
 			"selectedIconPath": "static/人物 (1).png",
 			"text": "场景句型"
-		},{
+		}, {
 			"pagePath": "pages/essay/essayHome",
 			"iconPath": "static/朗读短文.png",
 			"selectedIconPath": "static/朗读短文 (1).png",
 			"text": "小短文"
-		},{
+		}, {
 			"pagePath": "pages/download/downloadHome",
 			"iconPath": "static/打印.png",
 			"selectedIconPath": "static/打印 (1).png",
 			"text": "打印下载"
-		},{
+		}, {
 			"pagePath": "pages/user/userCenter",
 			"iconPath": "static/我的.png",
 			"selectedIconPath": "static/我的 (1).png",
@@ -103,6 +98,6 @@
 	"uniIdRouter": {},
 	"easycom": {
 		"autoscan": true,
-		"^vue-file-(.*)":"@/uni_modules/l-starRate/components/l-starRate.vue"
+		"^vue-file-(.*)": "@/uni_modules/l-starRate/components/l-starRate.vue"
 	}
 }
