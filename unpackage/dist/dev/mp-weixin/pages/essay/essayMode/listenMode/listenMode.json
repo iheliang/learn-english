@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "听力模式",
-  "usingComponents": {
-    "l-star-rate": "../../../../uni_modules/l-starRate/components/l-starRate/l-starRate"
-  }
-}

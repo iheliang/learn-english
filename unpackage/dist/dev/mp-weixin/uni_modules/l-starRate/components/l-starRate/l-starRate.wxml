@@ -1,1 +1,0 @@
-<view class="rate-box data-v-e83d347a"><block wx:for="{{a}}" wx:for-item="item" wx:key="d"><view class="{{['l-icons', 'icon-xingxing', 'star', 'data-v-e83d347a', item.a]}}" style="{{'color:' + item.b}}" bindtap="{{item.c}}"></view></block></view>
